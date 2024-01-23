@@ -73,7 +73,7 @@ defmodule DouYin do
   @type options :: [
           storage: DouYin.Storage.Adapter.t(),
           app_id: app_id,
-          appsecret: app_secret,
+          app_secret: app_secret,
           requester: module,
           sandbox?: sandbox?
         ]
