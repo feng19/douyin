@@ -265,7 +265,7 @@ defmodule DouYin.Refresher.Default do
         false
 
       error ->
-        Logger.warn(
+        Logger.warning(
           "Call #{inspect(client.storage())}.restore(#{store_id}, #{store_key}) failed, return error: #{inspect(error)}."
         )
 
@@ -365,7 +365,7 @@ defmodule DouYin.Refresher.Default do
       error ->
         refresh_retry_interval = options.refresh_retry_interval
 
-        Logger.warn(
+        Logger.warning(
           "Refresh app_id: #{store_id}, key: #{store_key} failed, return error: #{inspect(error)}, Will be retry again #{refresh_retry_interval}s later."
         )
 
